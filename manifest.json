@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Scrap Creation Tool",
+    "version": "1.0",
+    "description": "Scrape LinkedIn profiles to generate flashcards.",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "host_permissions": [
+      "*://www.linkedin.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Create Flashcard"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.linkedin.com/*"],
+        "js": ["content.js"],
+        "css": ["style.css"]
+      }
+    ],
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+}
+  
